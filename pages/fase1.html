@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Ana</title>
+    <link rel="stylesheet" href="../css/fase1.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Coluna da Esquerda (História e Imagem) -->
+        <div class="left-column">
+            <div class="story-box">
+                Ana tem 9 anos e adora jogar seu jogo online favorito. Hoje, ela estava animada para jogar uma nova partida.
+            </div>
+            
+            <div class="image-container">
+                <div class="speech-bubble">
+                    Oba! Vamos ver se consigo passar de fase hoje!
+                </div>
+                <!-- Espaço para a sua imagem PNG -->
+                <div class="image-placeholder">
+                    <img src="https://via.placeholder.com/300?text=Sua+Imagem+Aqui" alt="Imagem da Ana" id="ana-image">
+                </div>
+            </div>
+
+            <div class="interaction-section">
+                <h3>Já aconteceu algo parecido com você?</h3>
+                <input type="text" placeholder="Sua resposta aqui...">
+                <button class="btn-enviar">Enviar</button>
+            </div>
+        </div>
+
+        <!-- Coluna da Direita (Pergunta e Opções) -->
+        <div class="right-column">
+            <h2>Como Ana deve agir enquanto joga online?</h2>
+            
+            <div class="options-container">
+                <!-- A Opção A é a correta (data-correct="true") -->
+                <button class="option-btn" data-correct="true">
+                    Opção A: Respeitar os outros jogadores, mesmo quando algo dá errado.
+                    <span class="icon"></span>
+                </button>
+                <button class="option-btn" data-correct="false">
+                    Opção B: Zombar de quem cometer erros.
+                    <span class="icon"></span>
+                </button>
+                <button class="option-btn" data-correct="false">
+                    Opção C: Ficar brava e xingar quando perder.
+                    <span class="icon"></span>
+                </button>
+            </div>
+
+            <a href="fase2.html">
+    <button class="btn-proximo">PRÓXIMO</button>
+</a>
+        </div>
+    </div>
+    
+    <script src="../js/fase1.js"></script>
+</body>
+</html>
