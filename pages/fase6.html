@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Ana - Fase 6</title>
+    <link rel="stylesheet" href="../css/fase6.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class="story-box">
+                Ana aprendeu que a internet e os jogos podem ser muito divertidos, desde que usados com respeito, responsabilidade e segurança.
+            </div>
+            
+            <div class="image-container">
+                <!-- Balões de fala removidos do HTML, pois já estão no PNG -->
+                <div class="image-placeholder">
+                    <img src="https://via.placeholder.com/320?text=Imagem+Fase+6" alt="Ana jogando consciente com os pais" id="ana-image">
+                </div>
+            </div>
+
+            <div class="interaction-section">
+                <h3>Já aconteceu algo parecido com você?</h3>
+                <input type="text" placeholder="Sua resposta aqui...">
+                <button class="btn-enviar">Enviar</button>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <h2>Quais são os 4 passos principais de segurança ao sofrer provocação em um jogo?</h2>
+            
+            <div class="options-container">
+                <button class="option-btn" data-correct="false">
+                    Opção A: Brigar, xingar de volta, chorar e desligar o computador.
+                    <span class="icon"></span>
+                </button>
+                <!-- A Opção B é a correta nesta fase -->
+                <button class="option-btn" data-correct="true">
+                    Opção B: Não responder, tirar print, bloquear e avisar um adulto de confiança.
+                    <span class="icon"></span>
+                </button>
+                <button class="option-btn" data-correct="false">
+                    Opção C: Ignorar os pais, dar a senha da conta e continuar jogando triste.
+                    <span class="icon"></span>
+                </button>
+            </div>
+
+            <!-- Como esta é a última fase, o botão pode direcionar para uma tela de fim ou voltar ao início -->
+            <a href="fim.html" style="text-decoration: none; display: flex; flex-direction: column;">
+                <button class="btn-proximo">PRÓXIMO</button>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/fase6.js"></script>
+</body>
+</html>
