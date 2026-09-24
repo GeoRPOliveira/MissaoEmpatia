@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <a class="btn-menu" href="InicialGamePage.html">← VOLTAR AO MAPA</a>
         <div class="left-column">
             <div class="story-box">
                 Ana aprendeu que a internet e os jogos podem ser muito divertidos, desde que usados com respeito, responsabilidade e segurança.
@@ -47,12 +48,11 @@
             </div>
 
             <!-- Como esta é a última fase, o botão pode direcionar para uma tela de fim ou voltar ao início -->
-            <a href="fim.html" style="text-decoration: none; display: flex; flex-direction: column;">
-                <button class="btn-proximo">PRÓXIMO</button>
-            </a>
+            <a class="btn-proximo disabled" href="InicialGamePage.html" aria-disabled="true">FINALIZAR</a>
         </div>
     </div>
     
+    <script src="../js/gameProgress.js"></script>
     <script src="../js/fase6.js"></script>
 </body>
 </html>

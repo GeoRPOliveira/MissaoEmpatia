@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <a class="btn-menu" href="InicialGamePage.html">← VOLTAR AO MAPA</a>
         <div class="left-column">
             <div class="story-box">
                 Mesmo tendo bloqueado, Ana ainda se sentia chateada. Ela sabia que não devia guardar aquele sentimento só para si.
@@ -47,12 +48,11 @@
             </div>
 
             <!-- Direciona para a próxima fase (se houver) ou tela final -->
-            <a href="fase6.html" style="text-decoration: none; display: flex; flex-direction: column;">
-                <button class="btn-proximo">PRÓXIMO</button>
-            </a>
+            <a class="btn-proximo disabled" href="fase6.html" aria-disabled="true">PRÓXIMO</a>
         </div>
     </div>
     
+    <script src="../js/gameProgress.js"></script>
     <script src="../js/fase5.js"></script>
 </body>
 </html>
