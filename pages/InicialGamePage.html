@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Início do Jogo</title>
+
+    <link rel="stylesheet" href="../css/InicialGamePage.css">
+</head>
+
+<body>
+
+    <main class="game-page">
+
+        <header class="top-bar">
+            <span class="page-title">
+                INÍCIO DO JOGO
+            </span>
+        </header>
+
+        <section class="game-content">
+
+            <div class="intro">
+
+                <h1>ESTA É ANA</h1>
+
+                <p class="intro-text">
+                    Conheça Ana e acompanhe sua aventura pelo mundo digital.
+                </p>
+
+                <div class="ana-wrapper">
+                    <img
+                        src="../img/ana.png"
+                        alt="Ana usando um computador"
+                        class="ana-image"
+                    >
+                </div>
+
+            </div>
+
+            <section class="game-map">
+
+                <div class="map-title">
+                    <span>AVENTURA DA ANA</span>
+                </div>
+
+                <!-- Linha 1 -->
+                <div class="path-row">
+
+                    <div class="node start">
+                        <span class="node-number">01</span>
+                        <span>INÍCIO</span>
+                    </div>
+
+                    <div class="connection"></div>
+
+                    <a class="node" data-phase="1" href="fase1.html">
+                        <span class="node-number">02</span>
+                        <span>DESAFIO 1</span>
+                    </a>
+
+                    <div class="connection"></div>
+
+                    <a class="node" data-phase="2" href="fase2.html">
+                        <span class="node-number">03</span>
+                        <span>DESAFIO 2</span>
+                    </a>
+
+                </div>
+
+                <!-- Linha 2 -->
+                <div class="path-row reverse">
+
+                    <a class="node" data-phase="5" href="fase5.html">
+                        <span class="node-number">06</span>
+                        <span>DESAFIO 5</span>
+                    </a>
+
+                    <div class="connection"></div>
+
+                    <a class="node" data-phase="4" href="fase4.html">
+                        <span class="node-number">05</span>
+                        <span>DESAFIO 4</span>
+                    </a>
+
+                    <div class="connection"></div>
+
+                    <a class="node" data-phase="3" href="fase3.html">
+                        <span class="node-number">04</span>
+                        <span>DESAFIO 3</span>
+                    </a>
+
+                </div>
+
+                <!-- Linha 3 -->
+                <div class="path-row">
+
+                    <a class="node" data-phase="6" href="fase6.html">
+                        <span class="node-number">07</span>
+                        <span>DESAFIO 6</span>
+                    </a>
+
+                    <div class="connection"></div>
+
+                    <div class="node finish" data-final="true">
+                        <span class="node-number">08</span>
+                        <span>FINAL</span>
+                    </div>
+
+                    <div class="connection"></div>
+
+                    <a class="node restart" href="#" id="restart-game">
+                        <span>↻</span>
+                        <span>JOGAR NOVAMENTE</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="../js/gameProgress.js"></script>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

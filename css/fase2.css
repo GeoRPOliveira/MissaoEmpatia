@@ -182,3 +182,55 @@ body {
         flex-direction: column;
     }
 }
+
+/* =========================================
+   NAVEGAÇÃO
+========================================= */
+
+.container {
+    position: relative;
+    padding-top: 58px;
+}
+
+.btn-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    background: white;
+    border: 1.5px solid black;
+    border-radius: 8px;
+
+    color: #1a1a1a;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-menu:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.btn-proximo {
+    display: block;
+    text-decoration: none;
+}
+
+.btn-proximo.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.btn-proximo.disabled:hover {
+    filter: none;
+}

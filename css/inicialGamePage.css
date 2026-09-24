@@ -1,0 +1,575 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background-color: #f8f4ed;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #222;
+}
+
+
+/* =========================================
+   PÁGINA
+========================================= */
+
+.game-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #f8f4ed;
+}
+
+
+/* =========================================
+   BARRA SUPERIOR
+========================================= */
+
+.top-bar {
+    position: relative;
+
+    width: 100%;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 1px solid #d6d0c8;
+}
+
+.page-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.game-content {
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+
+    padding: 42px 55px 60px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: clamp(28px, 4vw, 38px);
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    margin-bottom: 7px;
+}
+
+.intro-text {
+    font-size: 14px;
+
+    color: #444;
+
+    margin-bottom: 24px;
+}
+
+
+/* =========================================
+   IMAGEM DA ANA
+========================================= */
+
+.ana-wrapper {
+    width: fit-content;
+
+    margin: 0 auto 42px;
+
+    padding: 6px;
+
+    background-color: white;
+
+    border: 2px solid #222;
+
+    border-radius: 14px;
+
+    box-shadow: 5px 5px 0 #222;
+}
+
+.ana-image {
+    display: block;
+
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+}
+
+
+/* =========================================
+   MAPA
+========================================= */
+
+.game-map {
+    width: 100%;
+
+    padding: 28px 24px 32px;
+
+    background-color: rgba(255, 255, 255, 0.35);
+
+    border: 2px solid #222;
+
+    border-radius: 20px;
+}
+
+
+/* Título do mapa */
+
+.map-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+.map-title span {
+    padding: 7px 18px;
+
+    border: 2px solid #222;
+
+    border-radius: 20px;
+
+    background-color: white;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   LINHAS DO CAMINHO
+========================================= */
+
+.path-row {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.path-row:last-child {
+    margin-bottom: 0;
+}
+
+
+/*
+    A segunda linha anda no sentido contrário,
+    deixando o mapa mais parecido com um
+    caminho de jogo.
+*/
+
+.path-row.reverse {
+    flex-direction: row-reverse;
+}
+
+
+/* =========================================
+   NÓS
+========================================= */
+
+.node {
+    flex: 0 0 145px;
+
+    height: 58px;
+
+    padding: 8px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 2px solid #222;
+
+    border-radius: 18px;
+
+    background-color: white;
+
+    color: #222;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.node:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 4px 0 #222;
+}
+
+.node:active {
+    transform: translateY(0);
+
+    box-shadow: none;
+}
+
+
+/* Número */
+
+.node-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #222;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+
+    background-color: #f8f4ed;
+}
+
+
+/* =========================================
+   INÍCIO
+========================================= */
+
+.node.start {
+    background-color: #55bde8;
+}
+
+.node.start .node-number {
+    background-color: white;
+}
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.node.finish {
+    background-color: white;
+}
+
+
+/* =========================================
+   JOGAR NOVAMENTE
+========================================= */
+
+.node.restart {
+    background-color: #55bde8;
+
+    flex-direction: column;
+
+    gap: 1px;
+
+    font-size: 11px;
+}
+
+.node.restart > span:first-child {
+    font-size: 22px;
+
+    line-height: 18px;
+}
+
+.node.restart > span:last-child {
+    font-size: 10px;
+}
+
+
+/* =========================================
+   CONEXÕES
+========================================= */
+
+.connection {
+    position: relative;
+
+    flex: 1;
+
+    min-width: 30px;
+
+    height: 2px;
+
+    background-image:
+        repeating-linear-gradient(
+            to right,
+            #222 0,
+            #222 6px,
+            transparent 6px,
+            transparent 11px
+        );
+}
+
+
+/* Seta */
+
+.connection::after {
+    content: "➜";
+
+    position: absolute;
+
+    right: -3px;
+    top: 50%;
+
+    transform: translateY(-52%);
+
+    padding-left: 4px;
+
+    background-color: #f8f4ed;
+
+    color: #222;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .game-content {
+        padding: 35px 25px 45px;
+    }
+
+    .game-map {
+        padding: 24px 15px 28px;
+    }
+
+    .node {
+        flex-basis: 125px;
+
+        font-size: 12px;
+    }
+
+    .path-row {
+        gap: 8px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .game-content {
+        padding: 30px 15px 35px;
+    }
+
+    .ana-image {
+        width: 190px;
+        height: 190px;
+    }
+
+    .game-map {
+        padding: 20px 10px;
+    }
+
+    /*
+        Em telas pequenas o mapa continua horizontal,
+        mas os elementos ficam menores.
+    */
+
+    .node {
+        flex-basis: 105px;
+
+        height: 50px;
+
+        padding: 5px;
+
+        font-size: 10px;
+    }
+
+    .node-number {
+        width: 20px;
+        height: 20px;
+
+        font-size: 8px;
+    }
+
+    .connection {
+        min-width: 12px;
+    }
+
+    .connection::after {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .window-buttons {
+        left: 15px;
+    }
+
+    .game-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .intro h1 {
+        font-size: 26px;
+    }
+
+    .intro-text {
+        font-size: 12px;
+    }
+
+    .ana-image {
+        width: 170px;
+        height: 170px;
+    }
+
+    .game-map {
+        border-radius: 14px;
+    }
+
+    .node {
+        flex-basis: 82px;
+
+        height: 45px;
+
+        font-size: 8px;
+
+        gap: 3px;
+    }
+
+    .node-number {
+        width: 17px;
+        height: 17px;
+
+        font-size: 7px;
+    }
+
+    .connection {
+        min-width: 6px;
+    }
+
+    .connection::after {
+        font-size: 11px;
+    }
+}
+
+/* =========================================
+   ESTADO DAS FASES
+========================================= */
+
+.node[data-phase],
+.node[data-final] {
+    position: relative;
+}
+
+.node.locked {
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.node.locked:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: white;
+}
+
+.node.locked::after {
+    content: "🔒";
+
+    position: absolute;
+    top: -10px;
+    right: -8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    background-color: white;
+    border: 1.5px solid #222;
+    border-radius: 50%;
+
+    font-size: 12px;
+}
+
+.node.completed::after {
+    content: "✓";
+
+    position: absolute;
+    top: -10px;
+    right: -8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    background-color: white;
+    border: 1.5px solid #222;
+    border-radius: 50%;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.node[data-final].locked {
+    cursor: not-allowed;
+}
+
+.node[data-final].locked:hover {
+    transform: none;
+    box-shadow: none;
+}
