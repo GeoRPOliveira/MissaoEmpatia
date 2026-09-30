@@ -16,8 +16,10 @@ body {
 .container {
     display: flex;
     gap: 60px;
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
+    position: relative;
+    padding-top: 58px;
 }
 
 .left-column {
@@ -26,33 +28,25 @@ body {
     flex-direction: column;
 }
 
+/* Escondido pois o texto já faz parte da imagem horizontal */
 .story-box {
-    background: white;
-    border: 1.5px solid black;
-    border-radius: 8px;
-    padding: 15px 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.4;
-    width: 95%;
-    position: relative;
-    z-index: 2;
-    margin-bottom: -10px; /* Sobrepõe ligeiramente a imagem */
+    display: none; 
 }
 
 .image-container {
     position: relative;
-    margin-top: 15px;
+    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .image-placeholder {
-    width: 320px;
-    height: 320px;
-    background-color: #e0e0e0;
-    border-radius: 4px; /* Imagem da Fase 6 parece ter cantos mais retos */
-    border: 3px solid #3ba4f6; /* Borda azul em volta da imagem */
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    min-height: 330px; /* Mesmo tamanho e proporção padrão */
+    background-color: transparent;
+    border-radius: 12px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -62,38 +56,41 @@ body {
 .image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Garante que a imagem inteira aparece sem cortes */
 }
 
 .interaction-section {
-    margin-top: 40px;
+    margin-top: 60px; /* Empurra a pergunta para baixo mantendo o padrão */
 }
 
 .interaction-section h3 {
-    font-size: 22px;
+    font-size: 20px;
     color: #1a1a1a;
     margin-bottom: 15px;
 }
 
 .interaction-section input {
     width: 100%;
+    max-width: 400px;
     padding: 15px;
     border: 1px solid #dcdcdc;
     border-radius: 8px;
     margin-bottom: 15px;
     font-size: 14px;
     outline: none;
+    display: block;
 }
 
 .btn-enviar {
     background: white;
     border: 1.5px solid black;
     border-radius: 8px;
-    padding: 8px 25px;
+    padding: 8px 30px;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
     transition: 0.2s;
+    display: block;
 }
 
 .btn-enviar:hover {
@@ -134,7 +131,6 @@ body {
     justify-content: space-between;
     align-items: center;
     transition: filter 0.2s;
-    line-height: 1.4;
 }
 
 .option-btn:hover {
@@ -158,14 +154,53 @@ body {
     text-align: center;
     transition: filter 0.2s;
     width: 100%;
+    display: block;
+    text-decoration: none;
 }
 
 .btn-proximo:hover {
     filter: brightness(0.9);
 }
 
+.btn-proximo.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: #cccccc !important;
+}
+
+.btn-proximo.disabled:hover {
+    filter: none;
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
+}
+
+/* =========================================
+   NAVEGAÇÃO (Botão Voltar ao Mapa)
+========================================= */
+
+.btn-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    background: white;
+    border: 1.5px solid black;
+    border-radius: 8px;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-menu:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
 }
