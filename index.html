@@ -1,11 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Missão Empatia - Landing Page</title>
+
+    <title>Missão Empatia</title>
+
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-    
+
+<main class="home-page">
+
+    <header class="top-bar">
+        <span class="page-title">MISSÃO EMPATIA</span>
+    </header>
+
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="hero-section">
+
+        <div class="hero-text">
+            <span class="section-label">PROJETO DE EXTENSÃO</span>
+            <h1>
+                UM MUNDO DIGITAL
+                <span>MAIS EMPÁTICO</span>
+            </h1>
+            <p>
+                A internet faz parte do nosso dia a dia, mas é importante
+                aprender a utilizá-la com respeito, responsabilidade e empatia.
+            </p>
+            <p>
+                A <strong>Missão Empatia</strong> foi criada para ajudar
+                crianças a compreenderem situações de cyberbullying e
+                aprenderem maneiras mais seguras e respeitosas de agir
+                no ambiente digital.
+            </p>
+        </div>
+
+        <div class="hero-decoration">
+            <img
+                src="img/ana.png"
+                alt="Ana usando um computador"
+            >
+        </div>
+    </section>
+
+
+    <!-- VÍDEO -->
+
+    <section class="video-section">
+
+        <div class="section-heading">
+            <span class="section-label">CONHEÇA O PROJETO</span>
+            <h2>
+                ASSISTA AO NOSSO VÍDEO
+            </h2>
+            <p>
+                Antes de começar a missão, conheça um pouco mais sobre
+                o projeto e sobre a importância de ter empatia no mundo digital.
+            </p>
+        </div>
+
+        <div class="video-container">
+            <!-- Substitua pelo caminho do vídeo -->
+            <video controls>
+                <source src="video/VideoMissaoEmpatia.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+    </section>
+
+
+    <!-- JOGO -->
+    <section class="game-section">
+        <div class="game-card">
+            <div class="game-card-text">
+                <span class="section-label">MISSÃO EMPATIA</span>
+                <h2>
+                    PRONTO PARA COMEÇAR?
+                </h2>
+                <p>
+                    Ajude Ana em sua aventura pelo mundo digital.
+                    Complete os desafios e descubra como pequenas
+                    atitudes podem fazer a diferença.
+                </p>
+                <a href="pages/InicialGamePage.html" class="game-button">
+                    🎮 COMEÇAR O JOGO
+                </a>
+            </div>
+            <div class="game-card-image">
+                <img
+                    src="img/ana.png"
+                    alt="Ana"
+                >
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ARTIGO -->
+
+    <section class="article-section">
+        <div class="section-heading">
+            <span class="section-label">NOSSO TRABALHO</span>
+            <h2>
+                SOBRE O PROJETO
+            </h2>
+            <p>
+                Este projeto foi desenvolvido como parte de uma atividade
+                de extensão universitária e busca promover a conscientização
+                sobre o cyberbullying e o comportamento no ambiente digital.
+            </p>
+            <p>
+                Para conhecer melhor a pesquisa e os fundamentos que
+                deram origem à Missão Empatia, confira nosso artigo científico.
+            </p>
+        </div>
+
+
+        <div class="pdf-container">
+            <div class="pdf-header">
+                <span>📄</span>
+                <div>
+                    <h3>ARTIGO CIENTÍFICO</h3>
+                    <p>
+                        Leia o trabalho completo desenvolvido pelo grupo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Substitua pelo caminho do PDF -->
+
+            <iframe
+                src="docs/ArtigoCientifico.pdf"
+                title="Artigo científico - Missão Empatia">
+            </iframe>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>
+            MISSÃO EMPATIA • PROJETO DE EXTENSÃO
+        </p>
+    </footer>
+</main>
 </body>
 </html>

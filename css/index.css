@@ -1,0 +1,432 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f4ed;
+    color: #222;
+}
+
+.home-page {
+    min-height: 100vh;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.top-bar {
+    width: 100%;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    border-bottom: 2px solid #222;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.hero-section,
+.video-section,
+.game-section,
+.article-section {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.hero-section {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    padding: 70px 20px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-text {
+    max-width: 620px;
+}
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    color: #167da8;
+}
+
+.hero-text h1 {
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 0.95;
+
+    margin-bottom: 28px;
+}
+
+.hero-text h1 span {
+    display: block;
+    color: #55bde8;
+}
+
+.hero-text p {
+    max-width: 600px;
+
+    margin-bottom: 14px;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.hero-decoration {
+    flex-shrink: 0;
+
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    border: 2px solid #222;
+    border-radius: 20px;
+
+    box-shadow: 6px 6px 0 #222;
+}
+
+.hero-decoration img {
+    width: 240px;
+    height: 240px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+
+    margin: 0 auto 35px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    font-size: 17px;
+    line-height: 1.6;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   VÍDEO
+========================= */
+
+.video-section {
+    padding: 50px 20px 80px;
+}
+
+.video-container {
+    width: 100%;
+
+    background: #fff;
+
+    padding: 15px;
+
+    border: 2px solid #222;
+    border-radius: 20px;
+
+    box-shadow: 6px 6px 0 #222;
+}
+
+.video-container video {
+    display: block;
+
+    width: 100%;
+    max-height: 600px;
+
+    border-radius: 12px;
+}
+
+
+/* =========================
+   JOGO
+========================= */
+
+.game-section {
+    padding: 20px 20px 80px;
+}
+
+.game-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding: 45px;
+
+    background: #55bde8;
+
+    border: 2px solid #222;
+    border-radius: 20px;
+
+    box-shadow: 6px 6px 0 #222;
+}
+
+.game-card-text {
+    max-width: 650px;
+}
+
+.game-card h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    margin-bottom: 18px;
+}
+
+.game-card p {
+    font-size: 17px;
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+.game-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 55px;
+
+    padding: 0 28px;
+
+    background: #fff;
+
+    border: 2px solid #222;
+    border-radius: 12px;
+
+    color: #222;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    box-shadow: 4px 4px 0 #222;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.game-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #222;
+}
+
+.game-card-image {
+    width: 200px;
+    height: 200px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    border: 2px solid #222;
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.game-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   ARTIGO
+========================= */
+
+.article-section {
+    padding: 20px 20px 80px;
+}
+
+.pdf-container {
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 2px solid #222;
+    border-radius: 20px;
+
+    box-shadow: 6px 6px 0 #222;
+}
+
+.pdf-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px 25px;
+
+    border-bottom: 2px solid #222;
+}
+
+.pdf-header > span {
+    font-size: 32px;
+}
+
+.pdf-header h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.pdf-header p {
+    font-size: 14px;
+}
+
+.pdf-container iframe {
+    display: block;
+
+    width: 100%;
+    height: 700px;
+
+    border: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #fff;
+
+    border-top: 2px solid #222;
+}
+
+.footer p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 750px) {
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+
+        padding-top: 50px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-decoration {
+        width: 240px;
+        height: 240px;
+    }
+
+    .hero-decoration img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .game-card {
+        flex-direction: column;
+        text-align: center;
+
+        padding: 35px 25px;
+    }
+
+    .game-card-image {
+        order: -1;
+    }
+
+    .pdf-container iframe {
+        height: 500px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hero-section,
+    .video-section,
+    .game-section,
+    .article-section {
+        width: min(100% - 25px, 1100px);
+    }
+
+    .hero-section {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .game-section,
+    .article-section,
+    .video-section {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .game-button {
+        width: 100%;
+    }
+
+    .pdf-container iframe {
+        height: 400px;
+    }
+}
